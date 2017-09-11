@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+      var arr = [1,2,3,4,[0,1,2],{name:'leo'},function fn(){}];
+      function deepClone(obj){
+         var toString = Object.prototype.toString;
+         var array = obj.push?[]:{};
+         for (var attr in obj) {
+            if (toString.call(obj[attr]) === '[object Object]' || toString.call(obj[attr]) === '[object Array]') {
+               array[attr] = deepClone(obj[attr]);
+            } else {
+               array[attr] = obj[attr];
+            }
+         }
+         return array;
+      };
+      var arr1 = deepClone(arr);
+      console.log(arr1);
+   </script>
+</body>
+</html>
