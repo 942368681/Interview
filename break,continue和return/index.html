@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+      /*
+         在 break,continue和return 三个关键字中， break,continue是一起的，return 是函数返回语句，但是返回的同时也将函数停止
+
+         break和continue
+            退出循环或者switch语句，在其他地方使用会导致错误
+
+         break
+            1、终止break后续代码执行，同时跳出循环，后边的循环也不执行！
+               只能用在终止循环，不能终止函数执行！
+            2、退出一个switch语句
+
+         continue
+            1、和break语句相似。不同的是，它不是退出一个循环，而是开始循环的一次新迭
+               代。也就是跳过本次循环后续代码执行，继续执行后续循环代码。
+            2、只能用在while语句、do/while语句、for语句、或者for/in语句的循环体内，
+               在其它地方使用都会引起错误！
+
+         return
+            1、return语句就是用于指定函数返回的值。return语句只能出现在函数体内，
+               出现在代码中的其他任何地方都会造成语法错误
+
+      */
+      var arr = [1,2,3,4,5];
+      for (var k in arr) {
+         if (k == 2) {
+            break;
+         }
+         console.log(k);
+      }
+      for (var i = 0; i < arr.length; i++) {
+         if (i === 2) {
+            continue;
+         }
+         console.log(i);
+      }
+   </script>
+</body>
+</html>
