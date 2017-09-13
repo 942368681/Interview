@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+      /*
+         HashRouter / BrowserRouter / MemoryRouter / StaticRouter;
+
+         <MemoryRouter>组件在内存中保存“URL”信息，不会修改浏览器的地址栏，往往用于React Native或测试环境等非浏览器环境。
+
+         <StaticRouter>组件从名字能看出它从不修改路由，这在服务器端渲染时很有用
+
+         <BrowserRouter>和<HashRouter>都可以实现前端路由的功能，区别是前者基于url的pathname段，后者基于hash段。
+         前者：http://127.0.0.1:3000/article/num1
+         后者：http://127.0.0.1:3000/#/article/num1（不一定是这样，但#是少不了的）
+         这样的区别带来的直接问题就是当处于二级或多级路由状态时，刷新页面，<BrowserRouter>会将当前路由发送到服务器（因为是pathname），而<HashRouter>不会（因为是hash段）。
+         这就要求服务器要配合前端做一些简单的修改。修改的思想就是当收到请求的url不是功能性的，而是前端路由时，重新加载入口html文件
+      */
+   </script>
+</body>
+</html>
