@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+<body>
+   <div id="box" data-name-box="item"></div>
+   <!--
+      HTML5新增的方法，用来自定义属性
+      设置和读取都用dataset
+
+      为前端开发者提供自定义的属性，这些属性集可以通过对象的dataset属性获取，不支持该属性的浏览器可以通过 getAttribute方法获取,data-之后的以连字符分割的多个单词组成的属性，获取的时候使用驼峰风格
+      <div data-author="david" data-time="2011-06-20" data-comment-num="10">...</div>
+      div.dataset.commentNum; // 10
+   -->
+   <script type="text/javascript">
+      //读取
+      console.log(box.dataset.nameBox);
+      //设置
+      box.dataset.sayHello = 'hello';
+      console.log(box.dataset.sayHello);
+
+      //getAttribute/setAttribute方法的使用
+      //读取
+      let name = box.getAttribute('data-name-box');
+      console.log(name);
+      //设置
+      box.setAttribute('data-age',25);
+      let age = box.getAttribute('data-age');
+      console.log(age);
+      console.log(box);
+   </script>
+</body>
+</html>

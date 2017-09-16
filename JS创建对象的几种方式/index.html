@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+      /*
+         1. 简单对象的创建，使用对象字面量的方式{}创建一个对象（最简单，好理解，推荐使用）
+            var obj = {};
+         2.new一个类的实例
+            2.1有参构造函数
+            2.2无参构造函数
+               定义一个function，如果有new关键字去"实例化",那么该function可以看作是一个类
+               一个是构造函数下有属性，这个实例化对象身上就有这些属性
+               一个是构造函数下没继承的东西，可以在实例化对象上添加属性和方法
+         3.使用工厂方式来创建（Object关键字）
+            var person = new Object();
+         4.使用原型对象的方式  prototype关键字
+            在构造函数的原型下添加方法,通过原型链的查找，这个实例化对象也有这些属性和方法
+            function Dog(){
+
+            }
+            Dog.prototype.name="旺财";
+            Dog.prototype.eat=function(){
+               alert(this.name+"是个吃货");
+            }
+            var wangcai =new Dog();
+            wangcai.eat();
+      */
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+      /*
+          1. 不允许用with。(with是用来引用对象的已有属性)
+          2. 所有变量必须声明，赋值给未声明的变量报错，而不是隐匿创建全局变量。
+          3.eval中的代码不能创建eval所在作用域下的变量、函数。而是为eval单独创建一个作用域，并在eval返回时丢弃。
+          4.函数中的特殊对象arguments是静态副本，而不像非严格模式那样，修改arguments或修改参数变量会相互影响。
+          5. 删除configurable=false的属性时报错，而不是忽略。
+          6. 对象字面量重复属性名报错。
+          7. 禁止八进制字面量，如010（八进制的8）。
+          8. 严格模式下eval、arguments变为关键字，不能用作变量名。
+          9. 一般函数调用时（不是对象的方法调用，也不使用apply/call/bind等修改this）this指向null，而不是全局变量。
+          10. 试图修改不可写属性（writable=false），在不可扩展的对象上添加属性时报TypeError，而不是忽略。
+          11. arguments.caller,arguements.callee被禁用
+          12.严格模式中，函数形参存在同名的，抛出错误； 非严格模式不会
+      */
+   </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+   /*
+      JS并没有类(class)的概念,虽然说ES6开始有了类的概念，但是，这并不是说JS有了像Ruby、Java这些基于类的面向对象语言一样，有了全新的继承模型。ES6中的类，仅仅只是基于现有的原型继承的一种语法糖
+   */
+      class Person {
+         constructor(type){
+            this.type = type;
+         };
+         sayType (){
+            console.log('我的类别是：'+this.type);
+         };
+      };
+      //子类继承
+      class Peaple extends Person {
+         constructor(type,name){
+            super(type);
+            this.name = name;
+         };
+         sayName (){
+            console.log('我的名字是：'+this.name);
+         };
+      };
+      var p = new Peaple('人','小明');
+      p.sayType();
+      p.sayName();
+   </script>
+</body>
+</html>
