@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			span{
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+				string.slice(start,[end]);
+			 	作用：
+			 		截取指定范围的字符片段
+			 	参数：
+			 		start:起始位置
+			 		[end]:可选，终止位置，默认最后一位
+			 	返回值：string
+			 		1.不传参数，返回完整字符串
+			        2.截取到，返回截取到的字符串
+			  		3.没截取到，返回空字符串
+			  		4.负数，字符串长度+负数
+			        5.截取后不改变原字符串，返回的是新字符串
+			        6.不包含结束位置
+
+			    string.substring(start,[end])
+			 	作用：
+			 		截取指定范围的字符片段
+			 	参数：
+			 		start:起始位置
+			 		[end]:可选，终止位置，默认最后一位
+			        返回值：string
+			 		1.不传参数，返回完整字符串
+			        2.截取到，返回截取到的字符串
+			  		3.没截取到，返回空字符串
+			  		4.负数转成0
+			        5.截取后不改变原字符串，返回的是新字符串
+			        6.end<start，会自动换过来
+			        7.不包含结束位置
+
+			    string.substr(start,[length])
+			 	作用：
+			 		截取指定范围的字符片段
+			 	参数：
+			 		start:起始位置
+			 		[length]:截取个数，默认截取到最后一位
+			        返回值：string
+			 		1.不传参数，返回完整字符串
+			        2.截取到，返回截取到的字符串
+			  		3.没截取到，返回空字符串
+			  		4.负数，字符串长度+负数
+			        5.截取后不改变原字符串，返回的是新字符串
+			*/
+			var str = 'miaov';
+			console.log(str.slice())			//'miaov'
+			console.log(str.slice(2))			//'aov'
+			console.log(str.slice(10))			//''
+			console.log(str.slice(5,2))			//''
+			console.log(str.slice(-2,-1))		//'o'
+			console.log(str.slice(3,4))			//'o'
+
+			var str = 'miaov';
+			console.log(str.substring())		//'miaov'
+			console.log(str.substring(10))		//''
+			console.log(str.substring(1,2))		//'i'
+			console.log(str.substring(-1))		//'miaov'
+			console.log(str.substring(5,2))		//'aov'
+
+			var str = 'miaov';
+			console.log(str.substr())			//'miaov'
+			console.log(str.substr(10))			//''
+			console.log(str.substr(-1))			//'v'
+			console.log(str.substr(2,2))		//'ao'
+		</script>
+	</body>
+</html>

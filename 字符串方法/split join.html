@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+				string.split(s)
+			 	作用：
+			 		用指定字符分隔字符串，把结果放到数组里返回
+			 	参数：
+			 		s:分隔符
+			 	返回值：array
+			 		1.不传参，完整字符串作为一项放到数组里返回
+			 		2.分隔符是空字符串，字符串的每个字符作为一项，放到数组里
+			 		3.用字符串中有的字符分隔，分隔的结果放到数组里
+			 		4.如果用第一位或者最后一位分隔，会有空字符串
+			 		5.用字符串中没有的字符分隔，完整的字符串作为一项放数组里
+			 		
+			 	array.join([p])
+			 	作用：
+			 		数组的每一项用拼接符拼成一个字符串返回
+			 	参数：
+			 		[p]：可选，拼接符，默认是逗号
+			        返回值：string
+			  		1.不传参，每一项用逗号拼接
+			        2.拼接符是空字符串，每一项直接拼接
+			        3.拼接符拼接返回
+			*/
+			var str = 'miaov';
+			console.log(str.split())			//['miaov']
+			console.log(str.split(''))			//['m','i','a','o','v']
+			console.log(str.split('ao'))		//['mi','v']
+			console.log(str.split('mi'))		//['','aov']
+			console.log(str.split('z'))			//['miaov']
+			
+			var arr = [1,2,3];
+			console.log(arr.join())				//'1,2,3'
+			console.log(arr.join(''))			//'123'
+			console.log(arr.join('-'))	//'1-2-3'
+			var arr2=[1]
+			console.log(arr2.join('&'))
+			
+			//出现次数
+			var str = '17082hoabhhohabsh8oyh8ab';
+			console.log(str.split('ab').length-1);
+			//修改字符串
+			var n1='aaaabaaaabaaaabaaa';
+			var n2=n1.split('b').join('<span>c</span>');
+			document.body.innerHTML=n2;
+		</script>
+	</body>
+</html>

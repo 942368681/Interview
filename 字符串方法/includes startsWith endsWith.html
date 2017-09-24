@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+				string.includes(s)
+			 	作用：
+			 		ES6，字符串中是否有指定字符
+			 	参数：
+			 		s：指定字符
+			 	返回值：boolean
+			 		1.有，true
+			 		2.没有，false 
+			 		
+			 	string.startsWith(s,[pos])
+				作用：
+					ES6，是否以指定字符开始
+				参数：
+					s:指定字符
+					[pos]:可选，位置，默认是0
+				返回值：boolean
+					1.是，true
+					2.不是，false
+					
+				string.endsWith(s,[pos])
+				作用：
+					ES6，是否以指定字符结束
+				参数：
+					s:指定字符
+					[pos]:可选，位置，默认是最后一位,不包含结束位置
+				返回值：boolean
+					1.是，true
+					2.不是，false
+			*/
+			var str = 'miaov1';
+			console.log(str.includes('1'))
+			
+			var str = 'miaov';
+			console.log(str.startsWith('m'))
+			console.log(str.startsWith('ao',2))
+			
+			var str = 'miaov';
+			console.log(str.endsWith('v'))
+			console.log(str.endsWith('a',3))//true
+		</script>
+	</body>
+</html>
