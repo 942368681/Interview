@@ -7,7 +7,12 @@
 <body>
    <script type="text/javascript">
       let arr = [0,0,5,5,5,4,8,5,4,7,7,7,8,9];
-      let arr1 = new Set(arr);
+      let arr1 = Array.from(new Set(arr));
+      console.log(arr);
+      console.log(arr1);
+      arr1.push(666);
+      console.log(arr);
+      console.log(arr1);
    </script>
 </body>
 </html>
